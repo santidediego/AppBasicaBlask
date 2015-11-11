@@ -1,3 +1,4 @@
+#Archivo de tests
 import unittest
 import os
 import paginaEstatica
@@ -26,8 +27,5 @@ class paginaEstaticaTestCase(unittest.TestCase):
         self.assertEqual(result.status_code, 200)
 
     def test_name_status_code(self):
-        # sends HTTP GET request to the application
-        # on the specified path
         result = self.app.get('/user/santiago')
-        # assert the status code of the response
         self.assertEqual(result.status_code, 200)
